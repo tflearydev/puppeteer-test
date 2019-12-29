@@ -11,3 +11,8 @@ async function run () {
     browser.close();
 }
 run();
+
+// in your terminal, simply run:
+// node screenshot.js 'insert url here with no quotations'
+// ex: node screenshot.js https://google.com
+// screenshot.js is simply the file name, can be anything. 

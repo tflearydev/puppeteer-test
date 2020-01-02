@@ -38,27 +38,28 @@ puppeteer.launch({ headless: true }).then(async browser => {
 
 
 
-const query = "07.5";
+// const query = "07.5";
 
-page.evaluate(query => {
-  const elements = [...document.querySelectorAll('.c-form-field')];
+// page.evaluate(query => {
+//   const elements = [...document.querySelectorAll('.c-form-field')];
 
   // Either use .find or .filter, comment one of these
   // find element with find
-  const targetElement = elements.find(e => e.innerText.includes(query));
+  // const targetElement = elements.find(e => e.innerText.includes(query));
 
   // OR, find element with filter
   // const targetElement = elements.filter(e => e.innerText.includes(query))[0];
 
   // make sure the element exists, and only then click it
-  targetElement && targetElement.click();
-}, query)
+//   targetElement && targetElement.click();
+// }, query)
 
 
 
 //this here below is how I would click on a button to go to next page if it has a unique selector
-// await page.waitForSelector('#ProductDetails > div.ProductDetails-form__info > div.ProductDetails-form__sizes > fieldset > div > div.c-form-field.c-form-field--radio.c-form-field--checked.ProductSize', 10000) 
-// await page.click('#ProductDetails > div.ProductDetails-form__info > div.ProductDetails-form__sizes > fieldset > div > div.c-form-field.c-form-field--radio.c-form-field--checked.ProductSize');
+//so far, if a non unique selector is selected, it selects the first of course
+await page.waitForSelector('.ProductSize') 
+await page.click('.ProductSize');
 
 
 

@@ -56,11 +56,18 @@ page.evaluate(query => {
 
 
 
+//this here below is how I would click on a button to go to next page if it has a unique selector
+// await page.waitForSelector('#ProductDetails > div.ProductDetails-form__info > div.ProductDetails-form__sizes > fieldset > div > div.c-form-field.c-form-field--radio.c-form-field--checked.ProductSize', 10000) 
+// await page.click('#ProductDetails > div.ProductDetails-form__info > div.ProductDetails-form__sizes > fieldset > div > div.c-form-field.c-form-field--radio.c-form-field--checked.ProductSize');
+
+
 
 
 
 //   let selector = 'c-form-field'[2];
 //   await page.evaluate((selector) => document.querySelector(selector).click(), selector); 
+
+
   await page.screenshot({ path: 'stealth2.png', fullPage: true })
  
   console.log(`All done, check the screenshots. ✨`)

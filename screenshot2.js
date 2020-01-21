@@ -22,8 +22,8 @@ puppeteer.launch({ headless: true }).then(async browser => {
 //   await page.screenshot({ path: 'adblocker.png', fullPage: true })
  
   console.log(`Testing the stealth plugin..`)
-  await page.goto('https://footlocker.com/product/Nike-Air-Foamposite-Pro---Men-s/V0369001.html')
-  await page.waitFor(5000);
+  await page.goto('https://netflix.com/YourAccount')
+  await page.waitFor(3000);
 
 //   await page.evaluate(() => {
 //     Array.from(document.querySelectorAll( '.c-form-field')).filter(element => 
@@ -58,8 +58,8 @@ puppeteer.launch({ headless: true }).then(async browser => {
 
 //this here below is how I would click on a button to go to next page if it has a unique selector
 //so far, if a non unique selector is selected, it selects the first of course
-await page.waitForSelector('.ProductSize') 
-await page.click('.ProductSize');
+// await page.waitForSelector('.ProductSize') 
+// await page.click('.ProductSize');
 
 
 
@@ -69,7 +69,7 @@ await page.click('.ProductSize');
 //   await page.evaluate((selector) => document.querySelector(selector).click(), selector); 
 
 
-  await page.screenshot({ path: 'stealth2.png', fullPage: true })
+  await page.screenshot({ path: 'stealth3.png', fullPage: true })
  
   console.log(`All done, check the screenshots. ✨`)
   await browser.close()
